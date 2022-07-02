@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ZPModel1Container" CdmEntityContainer="ZPEntities1">
+    <EntitySetMapping Name="Table_1">
+      <EntityTypeMapping TypeName="ZPModel1.Table_1">
+        <MappingFragment StoreEntitySet="Table_1">
+          <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+          <ScalarProperty Name="Имя" ColumnName="Имя" />
+          <ScalarProperty Name="Отчество" ColumnName="Отчество" />
+          <ScalarProperty Name="Название_цеха" ColumnName="Название цеха" />
+          <ScalarProperty Name="Дата_поступления_на_работу" ColumnName="Дата поступления на работу" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

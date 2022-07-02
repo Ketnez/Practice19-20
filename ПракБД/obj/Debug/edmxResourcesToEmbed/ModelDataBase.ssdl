@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище ZPModel1" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Table_1">
+    <Key>
+      <PropertyRef Name="Фамилия" />
+    </Key>
+    <Property Name="Фамилия" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Имя" Type="nvarchar" MaxLength="50" />
+    <Property Name="Отчество" Type="nvarchar" MaxLength="50" />
+    <Property Name="Название цеха" Type="nvarchar" MaxLength="50" />
+    <Property Name="Дата поступления на работу" Type="date" />
+  </EntityType>
+  <EntityContainer Name="Хранилище ZPModel1Container">
+    <EntitySet Name="Table_1" EntityType="Self.Table_1" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

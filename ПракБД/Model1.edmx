@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище ZPModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Table_1">
+          <Key>
+            <PropertyRef Name="Фамилия" />
+          </Key>
+          <Property Name="Фамилия" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Имя" Type="nvarchar" MaxLength="50" />
+          <Property Name="Отчество" Type="nvarchar" MaxLength="50" />
+          <Property Name="Название цеха" Type="nvarchar" MaxLength="50" />
+          <Property Name="Дата поступления на работу" Type="date" />
+        </EntityType>
+        <EntityType Name="Table_3">
+          <Key>
+            <PropertyRef Name="Размер зп" />
+          </Key>
+          <Property Name="Размер зп" Type="int" Nullable="false" />
+          <Property Name="Стаж работника" Type="int" />
+          <Property Name="Разряд" Type="int" />
+          <Property Name="Должность" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="Хранилище ZPModelContainer">
+          <EntitySet Name="Table_1" EntityType="Self.Table_1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_3" EntityType="Self.Table_3" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ZPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Table_1">
+          <Key>
+            <PropertyRef Name="Фамилия" />
+          </Key>
+          <Property Name="Фамилия" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Имя" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Отчество" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Название_цеха" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Дата_поступления_на_работу" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Table_3">
+          <Key>
+            <PropertyRef Name="Размер_зп" />
+          </Key>
+          <Property Name="Размер_зп" Type="Int32" Nullable="false" />
+          <Property Name="Стаж_работника" Type="Int32" />
+          <Property Name="Разряд" Type="Int32" />
+          <Property Name="Должность" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ZPEntities4" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Table_1" EntityType="Self.Table_1" />
+          <EntitySet Name="Table_3" EntityType="Self.Table_3" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ZPModelContainer" CdmEntityContainer="ZPEntities4">
+          <EntitySetMapping Name="Table_1">
+            <EntityTypeMapping TypeName="ZPModel.Table_1">
+              <MappingFragment StoreEntitySet="Table_1">
+                <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+                <ScalarProperty Name="Имя" ColumnName="Имя" />
+                <ScalarProperty Name="Отчество" ColumnName="Отчество" />
+                <ScalarProperty Name="Название_цеха" ColumnName="Название цеха" />
+                <ScalarProperty Name="Дата_поступления_на_работу" ColumnName="Дата поступления на работу" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_3">
+            <EntityTypeMapping TypeName="ZPModel.Table_3">
+              <MappingFragment StoreEntitySet="Table_3">
+                <ScalarProperty Name="Размер_зп" ColumnName="Размер зп" />
+                <ScalarProperty Name="Стаж_работника" ColumnName="Стаж работника" />
+                <ScalarProperty Name="Разряд" ColumnName="Разряд" />
+                <ScalarProperty Name="Должность" ColumnName="Должность" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
